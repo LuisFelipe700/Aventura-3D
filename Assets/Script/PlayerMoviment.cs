@@ -9,7 +9,9 @@ public class PlayerMoviment : MonoBehaviour
     private Animator animator;
     private bool estaNoChao = true;
     private float velocidadeAtual;
-    private bool estaVivo = true;
+    private bool contato = false;
+    private bool morrer = true;
+    private SistemaDeVida sVida;
     private Vector3 anguloRotacao = new Vector3(0, 90, 0);
     [SerializeField] private float velocidadeAndar;
     [SerializeField] private float velocidadeCorrer;
@@ -20,19 +22,26 @@ public class PlayerMoviment : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        sVida = GetComponent<SistemaDeVida>();
         velocidadeAtual = velocidadeAndar;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(estaVivo) 
-        andar();
-        girar();
-        pular();
-        correr();
-        atacar();
-        perfurar();
+        if (sVida.EstaVivo())
+        {
+            andar();
+            girar();
+            pular();
+            correr();
+            //atacar();
+            perfurar();
+        }
+        else if (!sVida.EstaVivo() && morrer)
+        {
+            Morrer();
+        }
     }
 
     private void andar()
@@ -47,7 +56,7 @@ public class PlayerMoviment : MonoBehaviour
             animator.SetBool("andar", true);
             animator.SetBool("andarTras", false);
         }
-        else if(Input.GetKey(KeyCode.S)) 
+        else if (Input.GetKey(KeyCode.S))
         {
             animator.SetBool("andarTras", true);
             animator.SetBool("andar", false);
@@ -73,7 +82,6 @@ public class PlayerMoviment : MonoBehaviour
         {
             animator.SetBool("andar", true);
         }
-        
     }
 
     private void pular()
@@ -87,24 +95,24 @@ public class PlayerMoviment : MonoBehaviour
 
     private void correr()
     {
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
         {
             velocidadeAtual = velocidadeCorrer;
             animator.SetBool("correr", true);
-
         }
         else
         {
             velocidadeAtual = velocidadeAndar;
-            animator.SetBool("correr",false);
+            animator.SetBool("correr", false);
         }
     }
 
-    private void morrer()
+    private void Morrer()
     {
-        animator.SetBool("estaVivo",false);
+        morrer = false;
+        animator.SetBool("estaVivo", false);
         animator.SetTrigger("morrer");
-        estaVivo = false;
+        rb.Sleep();
     }
 
     private void interagir()
@@ -116,13 +124,15 @@ public class PlayerMoviment : MonoBehaviour
     {
         animator.SetTrigger("pegar");
     }
+
     private void atacar()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("atacar");
-        }
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        animator.SetTrigger("atacar");
+        //}
     }
+
     private void perfurar()
     {
         if (Input.GetMouseButtonDown(1))
@@ -130,6 +140,19 @@ public class PlayerMoviment : MonoBehaviour
             animator.SetTrigger("perfurar");
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Quebra"))
+        {
+            atacar();
+        }
+    }
+
+    public void Hit()
+    {
+        animator.SetTrigger("Hit");
+    }
+
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
@@ -137,9 +160,10 @@ public class PlayerMoviment : MonoBehaviour
             estaNoChao = true;
             animator.SetBool("estaNoChao", true);
         }
-        if(collision.gameObject.CompareTag("Fatal")&& estaVivo)
+        if (collision.gameObject.CompareTag("Quebra") && Input.GetMouseButtonDown(0))
         {
-            morrer();
+            atacar();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -150,15 +174,22 @@ public class PlayerMoviment : MonoBehaviour
             estaNoChao = false;
             animator.SetBool("estaNoChao", false);
         }
+        if (collision.gameObject.CompareTag("Quebra"))
+        {
+
+            contato = false;
+        }
+
     }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Item") && Input.GetKey(KeyCode.E))
         {
             pegar();
-            Destroy(other.gameObject); 
+            Destroy(other.gameObject);
         }
-        else if(other.CompareTag("Porta") && Input.GetKey(KeyCode.E))
+        else if (other.CompareTag("Porta") && Input.GetKey(KeyCode.E))
         {
             interagir();
             other.gameObject.GetComponent<Animator>().SetTrigger("abrir");

@@ -8,6 +8,7 @@ TagManager:
   - Porta
   - Item
   - Fatal
+  - Quebra
   layers:
   - Default
   - TransparentFX
