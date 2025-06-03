@@ -13,6 +13,8 @@ public class PlayerMoviment : MonoBehaviour
     private bool morrer = true;
     private SistemaDeVida sVida;
     private Vector3 anguloRotacao = new Vector3(0, 90, 0);
+    private bool temChave = false;
+    private int numeroChave = 0;
     [SerializeField] private float velocidadeAndar;
     [SerializeField] private float velocidadeCorrer;
     [SerializeField] private float forcaPulo;
@@ -191,8 +193,18 @@ public class PlayerMoviment : MonoBehaviour
         }
         else if (other.CompareTag("Porta") && Input.GetKey(KeyCode.E))
         {
+            if(other.gameObject.GetComponent<Porta>().EstaTrancada())
             interagir();
-            other.gameObject.GetComponent<Animator>().SetTrigger("abrir");
+            other.gameObject.GetComponent<Porta>().AbrirPorta(numeroChave);
         }
+        else if(other.CompareTag("Chave") && Input.GetKey(KeyCode.E))
+        {
+            pegar();
+            temChave = true;
+            numeroChave = other.gameObject.GetComponent<Chave>().NumeroPorta();
+            other.gameObject.GetComponent<Chave>().Pegarchave();
+
+        }
+
     }
 }

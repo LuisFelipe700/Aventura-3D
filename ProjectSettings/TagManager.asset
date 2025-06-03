@@ -9,6 +9,8 @@ TagManager:
   - Item
   - Fatal
   - Quebra
+  - Chave
+  - Bau
   layers:
   - Default
   - TransparentFX
