@@ -197,6 +197,12 @@ public class PlayerMoviment : MonoBehaviour
             interagir();
             other.gameObject.GetComponent<Porta>().AbrirPorta(numeroChave);
         }
+        else if (other.CompareTag("Bau") && Input.GetKey(KeyCode.E))
+        {
+            if (other.gameObject.GetComponent<Bau>().BauTrancado())
+                interagir();
+            other.gameObject.GetComponent<Bau>().AbrirBau(numeroChave);
+        }
         else if(other.CompareTag("Chave") && Input.GetKey(KeyCode.E))
         {
             pegar();

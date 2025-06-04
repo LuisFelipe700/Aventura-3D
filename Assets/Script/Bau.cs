@@ -10,7 +10,7 @@ private void Start()
 {
     animator = GetComponent<Animator>();
 }
-public void AbrirPorta(int nChave = 0)
+public void AbrirBau(int nChave = 0)
 {
     if (nChave == 0 && !bauTrancado)
     {
@@ -22,7 +22,7 @@ public void AbrirPorta(int nChave = 0)
         bauTrancado = false;
     }
 }
-public bool EstaTrancada()
+public bool BauTrancado()
 {
     return bauTrancado;
 }
