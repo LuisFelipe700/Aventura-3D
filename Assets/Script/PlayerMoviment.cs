@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
@@ -18,6 +19,9 @@ public class PlayerMoviment : MonoBehaviour
     [SerializeField] private float velocidadeAndar;
     [SerializeField] private float velocidadeCorrer;
     [SerializeField] private float forcaPulo;
+    [SerializeField] private int forcaArremeco;
+    [SerializeField] private GameObject miraMachado;
+    [SerializeField] private GameObject machadoPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -139,6 +143,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
+            StartCoroutine(LancarObjeto());
             animator.SetTrigger("perfurar");
         }
     }
@@ -212,5 +217,14 @@ public class PlayerMoviment : MonoBehaviour
 
         }
 
+    }
+     
+    IEnumerator LancarObjeto()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
+        machado.transform.rotation *= Quaternion.Euler(0, -180, 0 );
+        Rigidbody rbMachado = machado.GetComponent<Rigidbody>();
+        rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Impulse);
     }
 }
