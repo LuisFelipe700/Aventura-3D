@@ -225,6 +225,6 @@ public class PlayerMoviment : MonoBehaviour
         GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
         machado.transform.rotation *= Quaternion.Euler(0, -180, 0 );
         Rigidbody rbMachado = machado.GetComponent<Rigidbody>();
-        rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Impulse);
+        rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Acceleration);
     }
 }
