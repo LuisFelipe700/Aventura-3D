@@ -11,6 +11,7 @@ TagManager:
   - Quebra
   - Chave
   - Bau
+  - Mana
   layers:
   - Default
   - TransparentFX

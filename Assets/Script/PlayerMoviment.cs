@@ -191,6 +191,12 @@ public class PlayerMoviment : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.CompareTag("Mana") && Input.GetKey(KeyCode.E))
+        {
+            pegar();
+            sVida.CargaMana(50);
+            Destroy(other.gameObject);
+        }
         if (other.CompareTag("Item") && Input.GetKey(KeyCode.E))
         {
             pegar();
@@ -219,12 +225,13 @@ public class PlayerMoviment : MonoBehaviour
 
     }
      
-    IEnumerator LancarObjeto()
-    {
-        yield return new WaitForSeconds(0.5f);
-        GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
-        machado.transform.rotation *= Quaternion.Euler(0, -180, 0 );
-        Rigidbody rbMachado = machado.GetComponent<Rigidbody>();
-        rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Acceleration);
+        IEnumerator LancarObjeto()
+        {
+            yield return new WaitForSeconds(0.5f);
+            GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
+            machado.transform.rotation *= Quaternion.Euler(0, -180, 0 );
+            Rigidbody rbMachado = machado.GetComponent<Rigidbody>();
+            rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Acceleration);
+            sVida.UsarMana();
+        }
     }
-}
