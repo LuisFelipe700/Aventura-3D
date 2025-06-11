@@ -16,6 +16,7 @@ public class PlayerMoviment : MonoBehaviour
     private Vector3 anguloRotacao = new Vector3(0, 90, 0);
     private bool temChave = false;
     private int numeroChave = 0;
+    private SistemaInterativo sInterativo;
     [SerializeField] private float velocidadeAndar;
     [SerializeField] private float velocidadeCorrer;
     [SerializeField] private float forcaPulo;
@@ -30,6 +31,7 @@ public class PlayerMoviment : MonoBehaviour
         animator = GetComponent<Animator>();
         sVida = GetComponent<SistemaDeVida>();
         velocidadeAtual = velocidadeAndar;
+        sInterativo = GetComponent<SistemaInterativo>();
     }
 
     // Update is called once per frame
@@ -223,9 +225,37 @@ public class PlayerMoviment : MonoBehaviour
 
         }
 
+
     }
-     
-        IEnumerator LancarObjeto()
+    private void OnTriggerEnter(Collider other)//Serve para mostrar trancado,destrancado etc.
+    {
+        if (other.CompareTag("Mana"))
+        {
+            sInterativo.ExibirInteragir();
+        }
+        else if (other.CompareTag("Vida"))
+        {
+            sInterativo.ExibirInteragir();
+        }
+        else if (other.CompareTag("Porta"))
+        {
+            if (other.gameObject.GetComponent<Porta>().EstaTrancada())
+            {
+                sInterativo.ExibirTrancado();
+            }
+            else if (!other.gameObject.GetComponent<Porta>().EstaTrancada())
+            {
+                sInterativo.ExibirAberto();
+            }
+        }
+
+        else if (other.CompareTag("Chave"))
+        {
+            sInterativo.ExibirInteragir();
+        }
+    }
+
+    IEnumerator LancarObjeto()
         {
             yield return new WaitForSeconds(0.5f);
             GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
