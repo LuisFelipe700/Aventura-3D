@@ -54,7 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e11f888e3b6b0704d8d1eecbaa46170c, type: 3}
       propertyPath: m_Name
-      value: wall_doorway_scaffold
+      value: PortaAnimada
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e11f888e3b6b0704d8d1eecbaa46170c, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

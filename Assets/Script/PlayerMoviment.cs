@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-
+using System;
 public class PlayerMoviment : MonoBehaviour
 
 {
@@ -10,7 +10,7 @@ public class PlayerMoviment : MonoBehaviour
     private Animator animator;
     private bool estaNoChao = true;
     private float velocidadeAtual;
-    private bool contato = false; 
+    private bool contato = false;
     private bool morrer = true;
     private SistemaDeVida sVida;
     private Vector3 anguloRotacao = new Vector3(0, 90, 0);
@@ -145,7 +145,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            StartCoroutine(LancarObjeto());
+            StartCoroutine("LancarObjeto");
             animator.SetTrigger("perfurar");
         }
     }
@@ -206,8 +206,8 @@ public class PlayerMoviment : MonoBehaviour
         }
         else if (other.CompareTag("Porta") && Input.GetKey(KeyCode.E))
         {
-            if(other.gameObject.GetComponent<Porta>().EstaTrancada())
-            interagir();
+            if (other.gameObject.GetComponent<Porta>().EstaTrancada())
+                interagir();
             other.gameObject.GetComponent<Porta>().AbrirPorta(numeroChave);
         }
         else if (other.CompareTag("Bau") && Input.GetKey(KeyCode.E))
@@ -216,7 +216,7 @@ public class PlayerMoviment : MonoBehaviour
                 interagir();
             other.gameObject.GetComponent<Bau>().AbrirBau(numeroChave);
         }
-        else if(other.CompareTag("Chave") && Input.GetKey(KeyCode.E))
+        else if (other.CompareTag("Chave") && Input.GetKey(KeyCode.E))
         {
             pegar();
             temChave = true;
@@ -227,41 +227,16 @@ public class PlayerMoviment : MonoBehaviour
 
 
     }
-    private void OnTriggerEnter(Collider other)//Serve para mostrar trancado,destrancado etc.
-    {
-        if (other.CompareTag("Mana"))
-        {
-            sInterativo.ExibirInteragir();
-        }
-        else if (other.CompareTag("Vida"))
-        {
-            sInterativo.ExibirInteragir();
-        }
-        else if (other.CompareTag("Porta"))
-        {
-            if (other.gameObject.GetComponent<Porta>().EstaTrancada())
-            {
-                sInterativo.ExibirTrancado();
-            }
-            else if (!other.gameObject.GetComponent<Porta>().EstaTrancada())
-            {
-                sInterativo.ExibirAberto();
-            }
-        }
+    
 
-        else if (other.CompareTag("Chave"))
-        {
-            sInterativo.ExibirInteragir();
-        }
-    }
-
-    IEnumerator LancarObjeto()
+        IEnumerator LancarObjeto()
         {
             yield return new WaitForSeconds(0.5f);
             GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
-            machado.transform.rotation *= Quaternion.Euler(0, -180, 0 );
+            machado.transform.rotation *= Quaternion.Euler(0, -180, 0);
             Rigidbody rbMachado = machado.GetComponent<Rigidbody>();
             rbMachado.AddForce(miraMachado.transform.forward * forcaArremeco, ForceMode.Acceleration);
             sVida.UsarMana();
         }
     }
+
