@@ -14,16 +14,16 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 1
-  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.017
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+  m_Fog: 0
+  m_FogColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.028
+  m_LinearFogStart: -7.41
+  m_LinearFogEnd: 22.06
+  m_AmbientSkyColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.27
+  m_AmbientIntensity: 0
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteInterface: {fileID: 100999864}
-  tempoExibir: 2.5
+  tempoExibir: 3.5
   textoAviso: {fileID: 1673277269}
 --- !u!1 &3478843
 GameObject:
@@ -282,7 +282,11 @@ Transform:
   - {fileID: 1441854333}
   - {fileID: 2110045491}
   - {fileID: 677166957}
+  - {fileID: 1486257963}
   - {fileID: 1898670897}
+  - {fileID: 416916114}
+  - {fileID: 1197158165}
+  - {fileID: 1725069625}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7679968
@@ -1884,9 +1888,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0463be5bdecb7ad45af931aa27bfade9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numeroBau: 0
-  BauT: 0
-  spriteAvisoPorta: {fileID: 0}
+  numeroBau: 1
+  BauT: 1
+  spriteAvisoPorta: {fileID: 21300000, guid: 896dc202ee000f54fa3f481c7ddd4ffe, type: 3}
 --- !u!64 &69258189
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1902,11 +1906,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -845910175149293702, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
 --- !u!95 &69258190
@@ -1931,6 +1935,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &69258194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69258184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Esta trancado
+  spriteAviso: {fileID: 21300000, guid: bec40bb469a426a46ad5919eb2ffab06, type: 3}
+  corAviso: {r: 1, g: 0, b: 0, a: 1}
+  avisoTemporario: 0
 --- !u!1 &71439583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ed6e81685223ff49a5c66f21fb0f035, type: 3}
@@ -6691,8 +6711,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19747569, y: -0.008168401, z: 0.0016455227, w: 0.9802724}
-  m_LocalPosition: {x: 24.83, y: 3.3459997, z: 12.040001}
+  m_LocalRotation: {x: 0.26689476, y: -0.008030681, z: 0.0022241045, w: 0.9636897}
+  m_LocalPosition: {x: 35.32, y: 4.856, z: -16.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8555,7 +8575,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8597,7 +8617,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -8617,13 +8637,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.21638241, y: -0.25224128, z: -0.057979483, w: 0.9413774}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -25.89, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,7 +8748,7 @@ GameObject:
   - component: {fileID: 416916113}
   - component: {fileID: 416916112}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MuroInvisivel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8769,8 +8789,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 12.323031, z: 114.328476}
-  m_Center: {x: 0, y: 5.6615148, z: -0.62371254}
+  m_Size: {x: 1, y: 12.323031, z: 132.73442}
+  m_Center: {x: 0, y: 5.6615148, z: 2.9715328}
 --- !u!4 &416916114
 Transform:
   m_ObjectHideFlags: 0
@@ -8779,12 +8799,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416916111}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.61, y: 1.1249253, z: 25.231243}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18, y: 0.5999253, z: -4.768757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 3478844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417604563 stripped
 GameObject:
@@ -14669,6 +14689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 677166957}
   - component: {fileID: 677166958}
+  - component: {fileID: 677166959}
   m_Layer: 0
   m_Name: AvisoLabirinto
   m_TagString: Untagged
@@ -14706,12 +14727,30 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 2.1998508, z: 5.50521}
   m_Center: {x: 0, y: 0.5999253, z: 0.23124266}
+--- !u!114 &677166959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677166956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: '
+
+    "Entre se tiver coragem. Saia se for capaz"'
+  spriteAviso: {fileID: 21300000, guid: 9061bafb55ee02348be59964bfdcddcd, type: 3}
+  corAviso: {r: 1, g: 0.9532509, b: 0, a: 1}
+  avisoTemporario: 1
 --- !u!1 &679671041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
@@ -25967,6 +26006,76 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
   m_PrefabInstance: {fileID: 1194643482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1197158164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197158165}
+  - component: {fileID: 1197158167}
+  - component: {fileID: 1197158166}
+  m_Layer: 0
+  m_Name: MuroInvisivel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1197158165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197158164}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: -41.3, y: 0.5999253, z: -71.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1197158166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197158164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Voce esta saindo do mapa
+  spriteAviso: {fileID: 21300000, guid: c5f733b129d99cb4389151ea70410e92, type: 3}
+  corAviso: {r: 1, g: 0, b: 0, a: 1}
+  avisoTemporario: 0
+--- !u!65 &1197158167
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197158164}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 12.323031, z: 132.73442}
+  m_Center: {x: 0, y: 5.6615148, z: 2.9715328}
 --- !u!1001 &1197936670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33419,6 +33528,76 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2634147639830484596, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
+--- !u!1 &1486257962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486257963}
+  - component: {fileID: 1486257965}
+  - component: {fileID: 1486257964}
+  m_Layer: 0
+  m_Name: AvisoLabirinto (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486257963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486257962}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.779999, y: 0, z: -34.37}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486257964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486257962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: "\n\"O sil\xEAncio da floresta guarda os segredos do caminho certo\""
+  spriteAviso: {fileID: 21300000, guid: 9061bafb55ee02348be59964bfdcddcd, type: 3}
+  corAviso: {r: 1, g: 0.9371229, b: 0, a: 1}
+  avisoTemporario: 1
+--- !u!65 &1486257965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486257962}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2.1998508, z: 5.50521}
+  m_Center: {x: 0, y: 0.5999253, z: 0.23124266}
 --- !u!1001 &1486413910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38953,6 +39132,76 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1076087955034305388, guid: 090caff838423f840ace665c8d795eff, type: 3}
+--- !u!1 &1725069624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725069625}
+  - component: {fileID: 1725069627}
+  - component: {fileID: 1725069626}
+  m_Layer: 0
+  m_Name: MuroInvisivel (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725069625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725069624}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.7071079}
+  m_LocalPosition: {x: -36.6, y: 0.5999253, z: 55.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1725069626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725069624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Voce esta saindo do mapa
+  spriteAviso: {fileID: 21300000, guid: c5f733b129d99cb4389151ea70410e92, type: 3}
+  corAviso: {r: 1, g: 0, b: 0, a: 1}
+  avisoTemporario: 0
+--- !u!65 &1725069627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725069624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 12.323031, z: 132.73442}
+  m_Center: {x: 0, y: 5.6615148, z: 2.9715328}
 --- !u!1 &1730023438 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eca3e9376cbef64479349dda45287d86, type: 3}
@@ -42180,19 +42429,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5911477
+      value: 0.7382976
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5338222
+      value: 0.6904955
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.52738
+      value: 0.63127387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.97
+      value: 31.8515
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42200,7 +42449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.04
+      value: -32.9753
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -42254,6 +42503,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3546630837441477689, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 69258188}
+    - targetCorrespondingSourceObject: {fileID: -3546630837441477689, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 69258194}
   m_SourcePrefab: {fileID: 100100000, guid: 8e03da41bc554f64bbd97f2c604e06c1, type: 3}
 --- !u!4 &1857190842 stripped
 Transform:
@@ -42776,7 +43028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0, z: 0}
-  ShoulderOffset: {x: 0.12, y: 2.82, z: -2.22}
+  ShoulderOffset: {x: 0.12, y: 4.33, z: -2.22}
   VerticalArmLength: 0.35
   CameraSide: 1
   CameraDistance: 3.77
@@ -42840,8 +43092,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880424765}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.19747569, y: -0.008168401, z: 0.0016455227, w: 0.9802724}
-  m_LocalPosition: {x: 24.83, y: 3.3459997, z: 12.040001}
+  m_LocalRotation: {x: 0.26689476, y: -0.008030681, z: 0.0022241045, w: 0.9636897}
+  m_LocalPosition: {x: 35.32, y: 4.856, z: -16.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42859,7 +43111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8b78ac948f05a46a6d8339a503172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtOffset: {x: -0.05, y: -1.26, z: 0}
+  LookAtOffset: {x: -0.05, y: -1.8, z: 0}
 --- !u!1001 &1883855044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43348,6 +43600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1898670897}
   - component: {fileID: 1898670898}
+  - component: {fileID: 1898670899}
   m_Layer: 0
   m_Name: AvisoLabirinto (1)
   m_TagString: Untagged
@@ -43385,12 +43638,28 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 2.1998508, z: 5.50521}
   m_Center: {x: 0, y: 0.5999253, z: 0.23124266}
+--- !u!114 &1898670899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898670896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: "\n\"A selva esconde caminhos... s\xF3 os corajosos encontram a sa\xEDda\""
+  spriteAviso: {fileID: 21300000, guid: 9061bafb55ee02348be59964bfdcddcd, type: 3}
+  corAviso: {r: 1, g: 0.90821296, b: 0, a: 1}
+  avisoTemporario: 1
 --- !u!1001 &1905002739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49134,7 +49403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313251831709503520, guid: b9aa412fde596fc44ad3408efe155cc0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.71
+      value: 35.2
       objectReference: {fileID: 0}
     - target: {fileID: 5313251831709503520, guid: b9aa412fde596fc44ad3408efe155cc0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -49142,7 +49411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5313251831709503520, guid: b9aa412fde596fc44ad3408efe155cc0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.03
+      value: -10.17
       objectReference: {fileID: 0}
     - target: {fileID: 5313251831709503520, guid: b9aa412fde596fc44ad3408efe155cc0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -49217,6 +49486,5 @@ SceneRoots:
   - {fileID: 6088274889838541648}
   - {fileID: 1153245864}
   - {fileID: 1950253103}
-  - {fileID: 146009956}
   - {fileID: 3478844}
-  - {fileID: 416916114}
+  - {fileID: 146009956}

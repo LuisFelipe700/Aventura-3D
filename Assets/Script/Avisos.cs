@@ -8,7 +8,7 @@ public class Avisos : MonoBehaviour
     [Header("Sprite para aparecer junto com o texto")]
     [SerializeField] private Sprite spriteAviso;
     [SerializeField] private Color corAviso = Color.white;
-    [Header("O aviso temporario")]
+    [Header("O aviso e temporario")]
     [SerializeField] private bool avisoTemporario = false;
 
 

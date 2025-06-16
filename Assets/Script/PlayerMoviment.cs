@@ -23,6 +23,7 @@ public class PlayerMoviment : MonoBehaviour
     [SerializeField] private int forcaArremeco;
     [SerializeField] private GameObject miraMachado;
     [SerializeField] private GameObject machadoPrefab;
+    [SerializeField] private GameObject quebraPreFab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,6 +38,10 @@ public class PlayerMoviment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            contato = true;
+        }
         if (sVida.EstaVivo())
         {
             andar();
@@ -133,12 +138,12 @@ public class PlayerMoviment : MonoBehaviour
         animator.SetTrigger("pegar");
     }
 
-    private void atacar()
+    private int atacar()
     {
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        animator.SetTrigger("atacar");
-        //}
+        animator.SetTrigger("Atacar");
+        Instantiate(quebraPreFab, miraMachado.transform.position,miraMachado.transform.rotation);
+        contato = false;
+        return 10;
     }
 
     private void perfurar()
@@ -169,11 +174,7 @@ public class PlayerMoviment : MonoBehaviour
             estaNoChao = true;
             animator.SetBool("estaNoChao", true);
         }
-        if (collision.gameObject.CompareTag("Quebra") && Input.GetMouseButtonDown(0))
-        {
-            atacar();
-            Destroy(collision.gameObject);
-        }
+        
     }
 
     private void OnCollisionExit(Collision collision)
@@ -223,6 +224,13 @@ public class PlayerMoviment : MonoBehaviour
             numeroChave = other.gameObject.GetComponent<Chave>().NumeroPorta();
             other.gameObject.GetComponent<Chave>().Pegarchave();
 
+        }
+        if (other.gameObject.CompareTag("Quebra"))
+        {
+            if(contato)
+            {
+                other.gameObject.GetComponent<ObjetoQuebra>().Quebrar(atacar());
+            }
         }
 
 
