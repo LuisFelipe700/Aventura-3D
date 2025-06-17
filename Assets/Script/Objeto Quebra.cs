@@ -15,4 +15,5 @@ public class ObjetoQuebra : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

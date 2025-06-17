@@ -24,8 +24,10 @@ public class PlayerMoviment : MonoBehaviour
     [SerializeField] private GameObject miraMachado;
     [SerializeField] private GameObject machadoPrefab;
     [SerializeField] private GameObject quebraPreFab;
+    //[SerializeField] private bool PulaPula = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,7 +37,7 @@ public class PlayerMoviment : MonoBehaviour
         sInterativo = GetComponent<SistemaInterativo>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -48,7 +50,6 @@ public class PlayerMoviment : MonoBehaviour
             girar();
             pular();
             correr();
-            //atacar();
             perfurar();
         }
         else if (!sVida.EstaVivo() && morrer)
@@ -140,7 +141,7 @@ public class PlayerMoviment : MonoBehaviour
 
     private int atacar()
     {
-        animator.SetTrigger("Atacar");
+        animator.SetTrigger("atacar");
         Instantiate(quebraPreFab, miraMachado.transform.position,miraMachado.transform.rotation);
         contato = false;
         return 10;
@@ -154,13 +155,7 @@ public class PlayerMoviment : MonoBehaviour
             animator.SetTrigger("perfurar");
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Quebra"))
-        {
-            atacar();
-        }
-    }
+    
 
     public void Hit()
     {
@@ -235,9 +230,9 @@ public class PlayerMoviment : MonoBehaviour
 
 
     }
-    
+   
 
-        IEnumerator LancarObjeto()
+    IEnumerator LancarObjeto()
         {
             yield return new WaitForSeconds(0.5f);
             GameObject machado = Instantiate(machadoPrefab, miraMachado.transform.position, miraMachado.transform.rotation);
