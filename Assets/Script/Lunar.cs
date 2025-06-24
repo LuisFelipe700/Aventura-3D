@@ -39,4 +39,5 @@ public class Lunar : MonoBehaviour
         yield return new WaitForSeconds(2.5f); // dá tempo do personagem subir
         SceneManager.LoadScene("CenaLunar"); 
     }
+
 }
