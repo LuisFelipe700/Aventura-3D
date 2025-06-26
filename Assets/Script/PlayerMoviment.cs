@@ -17,6 +17,8 @@ public class PlayerMoviment : MonoBehaviour
     private bool temChave = false;
     private int numeroChave = 0;
     private SistemaInterativo sInterativo;
+    public GameOverManager gameOverManager;
+
     [SerializeField] private float velocidadeAndar;
     [SerializeField] private float velocidadeCorrer;
     [SerializeField] private float forcaPulo;
@@ -127,7 +129,14 @@ public class PlayerMoviment : MonoBehaviour
         animator.SetBool("estaVivo", false);
         animator.SetTrigger("morrer");
         rb.Sleep();
+        StartCoroutine(MostrarGameOverDepois());
     }
+    private IEnumerator MostrarGameOverDepois()
+{
+    yield return new WaitForSeconds(3f); // espera 2 segundos
+    gameOverManager.GameOver();
+}
+
 
     private void interagir()
     {
