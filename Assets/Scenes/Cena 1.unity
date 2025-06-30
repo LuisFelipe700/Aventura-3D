@@ -282,7 +282,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1441854333}
+  - {fileID: 1267224101}
   - {fileID: 2110045491}
+  - {fileID: 1194033315}
+  - {fileID: 36052837}
+  - {fileID: 1870112857}
   - {fileID: 677166957}
   - {fileID: 1486257963}
   - {fileID: 1898670897}
@@ -1245,6 +1249,76 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33101239}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &36052836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36052837}
+  - component: {fileID: 36052839}
+  - component: {fileID: 36052838}
+  m_Layer: 0
+  m_Name: AvisoBandeira1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &36052837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36052836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: -100.64, y: -0.024999976, z: -39.69}
+  m_LocalScale: {x: 1, y: 1, z: 15.235835}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!65 &36052838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36052836}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 5.144375, z: 0.6334777}
+  m_Center: {x: 5.684342e-14, y: 2.0721874, z: -0.06689444}
+--- !u!114 &36052839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36052836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Esta chegando perto da chava, esta muito quente
+  spriteAviso: {fileID: 21300000, guid: 15a3647cd15d10745b3f1ea27d8d10d6, type: 3}
+  corAviso: {r: 1, g: 0, b: 0.08701134, a: 1}
+  avisoTemporario: 1
 --- !u!1001 &36426916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5491,19 +5565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avisoTexto: '
-
-
-
-
-
-
-
-
-
-
-'
-  spriteAviso: {fileID: 21300000, guid: 9f011c6b485281941b30a8b6d6d4cdfd, type: 3}
+  avisoTexto: "\n\n\n\n\n\nPasse do labirinto florestal para comecar a missao \n\n\n\n\n\n\n\n\n\n"
+  spriteAviso: {fileID: 21300000, guid: 977b48e51c5e6e24bb368a42948733b4, type: 3}
   corAviso: {r: 1, g: 1, b: 1, a: 1}
   avisoTemporario: 0
 --- !u!65 &236904799
@@ -26850,6 +26913,76 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2634147639830484596, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
+--- !u!1 &1194033314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194033315}
+  - component: {fileID: 1194033317}
+  - component: {fileID: 1194033316}
+  m_Layer: 0
+  m_Name: AvisoBandeira1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1194033315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194033314}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: -107.48, y: -0.024999976, z: -34.27}
+  m_LocalScale: {x: 1, y: 1, z: 15.235835}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1194033316
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194033314}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 5.144375, z: 0.6334777}
+  m_Center: {x: 5.684342e-14, y: 2.0721874, z: -0.06689444}
+--- !u!114 &1194033317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194033314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Esta chegando perto da chava, esta muito quente
+  spriteAviso: {fileID: 21300000, guid: 15a3647cd15d10745b3f1ea27d8d10d6, type: 3}
+  corAviso: {r: 1, g: 0, b: 0.08701134, a: 1}
+  avisoTemporario: 1
 --- !u!1001 &1194643482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28599,6 +28732,76 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 49296848564199152, guid: c4b943daa2aa4e840a46747f66722464, type: 3}
+--- !u!1 &1267224100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267224101}
+  - component: {fileID: 1267224103}
+  - component: {fileID: 1267224102}
+  m_Layer: 0
+  m_Name: AvisoBandeira (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267224101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267224100}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -65.34, y: -0.024999976, z: -17.8}
+  m_LocalScale: {x: 1, y: 1, z: 15.235835}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1267224102
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267224100}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3.0033965, z: 0.22248286}
+  m_Center: {x: 0, y: 1.0016983, z: 0.0010251281}
+--- !u!114 &1267224103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267224100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: "OBJETIVO\n encontre as duas bandeiras para ganhar o jogo"
+  spriteAviso: {fileID: 21300000, guid: c035ab29a9402c74fa84254c264ee89c, type: 3}
+  corAviso: {r: 0.9665693, g: 1, b: 0, a: 1}
+  avisoTemporario: 1
 --- !u!1001 &1268683541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33338,8 +33541,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.6114551, z: 0.22248286}
-  m_Center: {x: 0, y: 0.30572754, z: 0.0010251281}
+  m_Size: {x: 1, y: 3.1266446, z: 0.22248286}
+  m_Center: {x: 0, y: 1.0633223, z: 0.0010251281}
 --- !u!114 &1441854335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33352,8 +33555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avisoTexto: Ache as duas bandeiras para ganhar o jogo
-  spriteAviso: {fileID: 21300000, guid: c58a77859a9459e4ababf69b11283e85, type: 3}
+  avisoTexto: "OBJETIVO\n encontre as duas bandeiras para ganhar o jogo"
+  spriteAviso: {fileID: 21300000, guid: c035ab29a9402c74fa84254c264ee89c, type: 3}
   corAviso: {r: 0.9665693, g: 1, b: 0, a: 1}
   avisoTemporario: 1
 --- !u!1 &1442507386 stripped
@@ -34712,7 +34915,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3131676704459108523, guid: c451d5bdfb4835146869fc9aac033d8b, type: 3}
 --- !u!1001 &1493604103
@@ -35780,6 +35983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hills_A_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c451d5bdfb4835146869fc9aac033d8b, type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35812,7 +36019,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3131676704459108523, guid: c451d5bdfb4835146869fc9aac033d8b, type: 3}
 --- !u!1001 &1521182194
@@ -43977,6 +44184,76 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2634147639830484596, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
+--- !u!1 &1870112856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870112857}
+  - component: {fileID: 1870112859}
+  - component: {fileID: 1870112858}
+  m_Layer: 0
+  m_Name: AvisoBandeira1 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870112857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870112856}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: -87.21, y: -0.024999976, z: -1.87}
+  m_LocalScale: {x: 1, y: 1, z: 15.235835}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3478844}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!65 &1870112858
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870112856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 5.144375, z: 0.6334777}
+  m_Center: {x: 5.684342e-14, y: 2.0721874, z: -0.06689444}
+--- !u!114 &1870112859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870112856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avisoTexto: Esta muito frio da localizacao da chave
+  spriteAviso: {fileID: 21300000, guid: d768cbee27f3d874590aea573d4520c3, type: 3}
+  corAviso: {r: 0, g: 1, b: 0.9308512, a: 1}
+  avisoTemporario: 1
 --- !u!1 &1874819598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca7717452b897274996c1ba3d45badb1, type: 3}
@@ -49810,7 +50087,7 @@ Transform:
   m_GameObject: {fileID: 2110045490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.34, y: -0.024999976, z: -18}
+  m_LocalPosition: {x: -78.24, y: -0.024999976, z: -38.4}
   m_LocalScale: {x: 1, y: 1, z: 15.235835}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49835,8 +50112,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.6114551, z: 0.22248286}
-  m_Center: {x: 0, y: 0.30572754, z: 0.0010251281}
+  m_Size: {x: 1, y: 3.2917447, z: 0.6334777}
+  m_Center: {x: 0, y: 1.1458724, z: -0.06689444}
 --- !u!114 &2110045493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49849,9 +50126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avisoTexto: Ache as duas bandeiras para ganhar o jogo
-  spriteAviso: {fileID: 21300000, guid: c58a77859a9459e4ababf69b11283e85, type: 3}
-  corAviso: {r: 0.9665693, g: 1, b: 0, a: 1}
+  avisoTexto: Esta chegando perto da chave, mas ainda esta frio
+  spriteAviso: {fileID: 21300000, guid: d768cbee27f3d874590aea573d4520c3, type: 3}
+  corAviso: {r: 0, g: 0.18266344, b: 1, a: 1}
   avisoTemporario: 1
 --- !u!1001 &2111031177
 PrefabInstance:
