@@ -2666,7 +2666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 532.58704, y: 61.160706}
+  m_AnchoredPosition: {x: 592, y: 16}
   m_SizeDelta: {x: 139.711, y: 137.2849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100999864
@@ -4705,7 +4705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -101.19998, y: -62.999996}
   m_SizeDelta: {x: -10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201783476
@@ -5565,8 +5565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b61bde770307e4faa7c7c5fa380bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avisoTexto: "\n\n\n\n\n\nPasse do labirinto florestal para comecar a missao \n\n\n\n\n\n\n\n\n\n"
-  spriteAviso: {fileID: 21300000, guid: 977b48e51c5e6e24bb368a42948733b4, type: 3}
+  avisoTexto: '
+
+
+    Passe do labirinto florestal para comecar a missao '
+  spriteAviso: {fileID: 21300000, guid: 9f011c6b485281941b30a8b6d6d4cdfd, type: 3}
   corAviso: {r: 1, g: 1, b: 1, a: 1}
   avisoTemporario: 0
 --- !u!65 &236904799
@@ -10027,7 +10030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 498, y: 433}
+  m_AnchoredPosition: {x: 1244, y: 908}
   m_SizeDelta: {x: 117.9063, y: 12.8933}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448297146
@@ -16956,7 +16959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -101.19998, y: -62.999996}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &751971754
@@ -22167,7 +22170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -96.2, y: -63}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1003041582
@@ -38938,7 +38941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 578, y: 318}
+  m_AnchoredPosition: {x: 531.0908, y: 258.7351}
   m_SizeDelta: {x: 115.509, y: 15.691}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652527723
@@ -39359,7 +39362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 535.5437, y: -98.7699}
+  m_AnchoredPosition: {x: 596, y: -193}
   m_SizeDelta: {x: 291.6978, y: 81.715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673277269
